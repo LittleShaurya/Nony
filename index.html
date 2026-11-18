@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>NYC Rush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="game" aria-label="New York City racing game"></canvas>
+
+  <div id="hud">
+    <div class="panel"><span>POSITION</span><strong id="position">1 / 2</strong></div>
+    <div class="panel"><span>DISTANCE</span><strong id="distance">0.0 mi</strong></div>
+    <div class="panel"><span>SPEED</span><strong><span id="speed">0</span> mph</strong></div>
+  </div>
+
+  <div id="countdown">3</div>
+
+  <div id="start" class="overlay">
+    <div class="card">
+      <p class="eyebrow">MIDNIGHT GRAND TOUR</p>
+      <h1>NYC <em>RUSH</em></h1>
+      <p>Race through Manhattan. Dodge traffic. Beat the city's hardest driver.</p>
+      <button id="startButton">START ENGINE</button>
+      <div class="controls">← → STEER &nbsp;&nbsp; ↑ / W ACCELERATE &nbsp;&nbsp; ↓ / S BRAKE</div>
+    </div>
+  </div>
+
+  <div id="finish" class="overlay hidden">
+    <div class="card">
+      <p class="eyebrow" id="finishLabel">RACE COMPLETE</p>
+      <h1 id="finishTitle">VICTORY</h1>
+      <p id="finishStats"></p>
+      <button id="restartButton">RACE AGAIN</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
